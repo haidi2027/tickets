@@ -1,0 +1,801 @@
+
+html{
+  overscroll-behavior: none;
+}
+#root{
+  overscroll-behavior: none;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  background-color: rgb(69, 69, 82);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: fixed; 
+  z-index: 1000; 
+}
+.divnav{
+  width: 40%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+}
+.divnav > a{
+  text-decoration: none;
+  padding: 30px;
+  color: white;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.link:hover{
+  color: rgb(203, 99, 99); 
+}
+
+.link{
+  color: white;
+  padding:10px 30px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.divsearch{
+  width: 10%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  right: 120px;
+  gap: 60px;
+}
+.divsearch > a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.divsearch>a:hover{
+  color: rgb(203, 99, 99);
+}
+.logo{
+  width: 20%;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  font-family: "Akronim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.logo >h1>span {
+  color: rgb(232, 143, 143);
+}
+
+.herosec{
+  width: 100%;
+  height: 730px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1; 
+}
+
+.secosec{
+  width: 100%;
+  height: 730px;
+  color: white;
+  justify-content: center;
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 20;
+}
+.divs{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50%;
+  margin-top: 20px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  
+}
+
+.adiv > a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+}
+.adiv> a:hover{
+  color:  rgb(232, 143, 143);
+}
+.divs2{
+  width: 80%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+.divs21{
+  width: 20%;
+  height: 100%;
+  background-color: rgb(69, 69, 82);
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 35px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.divimg{
+  width: 90%;
+  height: 60%;
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.divimg > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.divword{
+  width: 100%;
+  height: 25%;
+  border-radius: 30px;
+  padding: 30px  0 30px 30px;
+  text-align: start;
+}
+.divbtn{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 10px  20px 10px 0 ;
+  
+}
+.swiper{
+  width: 100%;
+  height: 730px;
+  position: relative;  
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items:start;
+  flex-wrap: wrap;
+  background-color:  #06111f;
+}
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.swiper-image > img{
+  width: 48%;
+  height: 100%;
+  object-fit: cover;
+}
+.herosection{
+  text-align: start;
+  justify-content: start;
+  align-items: center;
+  width: 40%;
+  height: 375px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  color: rgb(255, 255, 255);
+  
+}
+.divh1{
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.divp{
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+.thirdsec{
+  width: 100%;
+  height: 630px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 20;
+}
+.divthird{
+  width: 60%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  z-index: 20;
+}
+.my-button {
+  background-color: rgb(69, 69, 82);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+.divthir{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom:  45px;
+  gap: 40px;
+
+}
+.divthir1{
+  width: 15%;
+  height: 100%;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.divs3{
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 160px;
+  
+}
+.divs32{
+  width: 20%;
+  height: 400px;
+  background-color: rgb(69, 69, 82);
+  border-radius: 25px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  z-index: 20;
+  margin: 15px;
+}
+.divs31{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.divimg1{
+  width: 100%;
+  height:60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.divimg1>img{
+  width: 80%;
+  height: 85%;
+  border-radius: 25px;
+}
+.divword1{
+  width: 100%;
+  height: 25%;
+  border-radius: 30px;
+  padding: 10px  0 30px 30px;
+  text-align: start;
+  color: white;
+}
+.divbtn1{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  color: rgb(248, 248, 185);
+  
+  
+}
+.divbtn11{
+  width: 40%;
+  height: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.section1{
+  width: 100%;
+  height: 100vh;
+  background-color: #06111f;
+  
+}
+.deimg{
+  width: 25%;
+  height: 65%;
+  position: absolute;
+  left: 180px;
+  top: 23vh;
+  border-radius: 15px;
+}
+.deimg>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.deword{
+  width: 40%;
+  height: 45%;
+  position: absolute;
+  right: 310px;
+  top: 25vh;
+  color: white;
+  
+}
+.deword>:first-child{
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.debttn{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap:40px;
+}
+.act{
+  width: 100%;
+  height: 80px;
+  padding-left: 80px;
+  color: white;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  position: relative;
+  z-index: 20;
+}
+
+.cast-container{
+  width: 100%;
+  height: 10%;
+  background-color: #06111f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.actor-card{
+  width:20%;
+  height: 15%;
+  margin:0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 250, 242);
+  z-index: 20;
+}
+.img-actor{
+  width: 100%;
+  height: 20%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-actor>img{
+  width: 40%;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+
+
+.booking-page {
+    min-height: 100vh;
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+    background-color: #06111f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.booking-layout {
+    position: relative;
+
+    width: 80%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.7s ease;
+}
+.booking-page h1 {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+
+/* ================= SCREEN ================= */
+
+.screen {
+  width: 80%;
+  
+  height: 400px;
+  /* background-color: #aaa; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: 5px 5px 15px 20px rgba(211, 211, 211, 0.121);
+}
+.screen >img{
+  width:100%;
+  height: 100%;
+  border:4px solid #090909;
+}
+
+
+/* ================= SEATS ================= */
+
+.seats-container {
+    width: fit-content;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.booking-layout.has-summary .seats-container {
+    transform: translateX(250px);
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-name {
+  width: 25px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+
+/* ================= SEAT ================= */
+
+.seat {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+/* ظهر الكرسي */
+
+.seat-back {
+  position: absolute;
+
+  left: 5px;
+  top: 2px;
+
+  width: 32px;
+  height: 27px;
+  border: 2px solid #d41a1a;
+  /* background:rgb(203, 99, 99); */
+
+  border-radius: 8px 8px 4px 4px;
+
+  transition: 0.25s;
+}
+
+
+/* قاعدة الكرسي */
+
+.seat::after {
+  content: "";
+
+  position: absolute;
+
+  left: 5px;
+  bottom: 3px;
+
+  width: 32px;
+  height: 9px;
+  border: 2px solid #d41a1a;
+  /* background:rgb(203, 99, 99); */
+
+  border-radius: 3px;
+
+  transition: 0.25s;
+}
+
+
+/* رقم الكرسي */
+
+.seat-number {
+  position: relative;
+
+  z-index: 2;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+
+  color: #e9ecf0;
+}
+
+
+/* Hover */
+
+.seat:not(.reserved):hover {
+  transform: translateY(-5px);
+}
+
+
+/* Selected */
+
+.seat.selected .seat-back,
+.seat.selected::after {
+  background: #d03333;
+}
+
+.seat.selected {
+  transform: translateY(-5px);
+}
+
+.seat.selected .seat-number {
+  color: white;
+}
+
+
+/* Reserved */
+
+.seat.reserved {
+  cursor: not-allowed;
+}
+
+.seat.reserved .seat-back,
+.seat.reserved::after {
+  background: #55555594;
+}
+
+.seat.reserved .seat-number {
+  color: #aaa;
+}
+
+
+/* ================= LEGEND ================= */
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #ccc;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-seat {
+  width: 18px;
+  height: 18px;
+
+  display: inline-block;
+
+  border-radius: 5px;
+}
+
+.legend-seat.available {
+  border: 2px solid #d41a1a;
+}
+
+.legend-seat.selected {
+  background: #d03333;
+}
+
+.legend-seat.reserved {
+  background: #5555555a;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.booking-summary {
+    position: absolute;
+
+    left: 0;
+
+    width: 400px;
+
+    padding: 30px;
+
+    background: rgba(45, 45, 67, 0.95);
+    border-radius: 20px;
+    text-align: center;
+    transform: translateX(-120%);
+    opacity: 0;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.5s ease;
+
+    pointer-events: none;
+}
+.booking-summary.show {
+    transform: translateX(0);
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.booking-summary h2 {
+  margin-bottom: 20px;
+}
+
+.booking-summary p {
+  color: #bbb;
+}
+
+.booking-summary strong {
+  color: white;
+}
+
+/* ================= BUTTON ================= */
+
+.confirm-btn {
+  margin-top: 15px;
+
+  padding: 12px 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #d03333;
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  transform: scale(1.05);
+}
+
+.confirm-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .booking-page {
+    padding: 30px 10px;
+  }
+
+  .screen {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+
+  .seat-row {
+    gap: 4px;
+  }
+
+  .seat {
+    width: 35px;
+    height: 38px;
+  }
+
+  .seat-back,
+  .seat::after {
+    left: 3px;
+    width: 28px;
+  }
+
+  .legend {
+    gap: 12px;
+    font-size: 12px;
+  }
+}
