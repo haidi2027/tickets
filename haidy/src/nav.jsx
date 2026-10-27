@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link }from 'react-router-dom';
-import { MDBBtn } from 'mdb-react-ui-kit';
-
-const nav = () => {
+const Nav = () => {
     return (
         <>
         
@@ -17,13 +15,11 @@ const nav = () => {
             <div className='logo'>
                 <h1>Cinema <span>TV</span></h1>
             </div>
-            <div className='divsearch'>
-                <MDBBtn  color='danger' style={{color:"white", display:"flex" , justifyContent:"center" , width:"20px", boxShadow:"none"}} >LogIn</MDBBtn>  
-            </div>
+        
         </nav>
         
         </>
     )
 }
 
-export default nav
+export default Nav

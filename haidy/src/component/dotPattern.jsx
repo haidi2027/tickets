@@ -40,14 +40,6 @@ const DotPattern = ({
     const baseRgb = hexToRgb(baseColor);
     const glowRgb = hexToRgb(glowColor);
 
-    const baseR = baseRgb.r;
-    const baseG = baseRgb.g;
-    const baseB = baseRgb.b;
-
-    const glowR = glowRgb.r;
-    const glowG = glowRgb.g;
-    const glowB = glowRgb.b;
-
     // Create dots
     const buildGrid = useCallback(() => {
         const container = containerRef.current;
@@ -85,7 +77,6 @@ const DotPattern = ({
     }, [gap]);
 
     // Draw animation
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const draw = useCallback(() => {
     const canvas = canvasRef.current;
         if (!canvas) return;
@@ -195,18 +186,18 @@ const DotPattern = ({
 
         animationRef.current = requestAnimationFrame(draw);
     }, [
-    proximity,
+    baseRgb.r,
+    baseRgb.g,
+    baseRgb.b,
+    glowRgb.r,
+    glowRgb.g,
+    glowRgb.b,
     dotSize,
     glowIntensity,
-    waveSpeed,
+    proximity,
     waveOpacity,
     waveScale,
-    baseR,
-    baseG,
-    baseB,
-    glowR,
-    glowG,
-    glowB,
+    waveSpeed
 ]);
 
     // Build grid

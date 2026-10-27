@@ -799,3 +799,217 @@ html{
     font-size: 12px;
   }
 }
+
+
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 200px;
+}
+
+.login-button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #102f55;
+  padding: 15px 55px;
+  border-radius: 8px;
+  font-size: 19px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:hover {
+  background: #174678;
+  transform: translateY(-3px);
+}
+
+.login-container {
+  width: 900px;
+  min-height: 580px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+  direction: ltr;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.form-section,
+.image-section {
+  width: 50%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  direction: rtl;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 350px;
+}
+
+.form-content h1 {
+  color: #102f55;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.welcome-text {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.sign-in-link {
+  border: none;
+  background: transparent;
+  color: #15528a;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.sign-in-link:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+form label {
+  color: #26384c;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+form input {
+  border: 1px solid #d2d8df;
+  border-radius: 7px;
+  padding: 13px;
+  font-size: 15px;
+  direction: rtl;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #15528a;
+  box-shadow: 0 0 0 3px rgba(21, 82, 138, 0.12);
+}
+
+.submit-button {
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: #102f55;
+  padding: 14px;
+  margin-top: 18px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background: #174678;
+}
+
+.image-section {
+  position: relative;
+  order: 2;
+  min-height: 580px;
+  background-image:
+    linear-gradient(rgba(4, 18, 38, 0.35), rgba(4, 18, 38, 0.75)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 45px;
+  color: white;
+  direction: rtl;
+}
+
+.image-overlay h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.image-overlay p {
+  font-size: 17px;
+}
+
+.message {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.success {
+  color: #16834b;
+}
+
+.error {
+  color: #cf3030;
+}
+
+/* انتقال الصورة إلى الناحية اليسرى */
+.login-container.sign-in-mode .image-section {
+  order: 1;
+}
+
+.login-container.sign-in-mode .form-section {
+  order: 2;
+}
+
+/* تصميم الهاتف */
+@media (max-width: 768px) {
+  .login-container {
+    width: 92%;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .form-section,
+  .image-section {
+    width: 100%;
+  }
+
+  .image-section {
+    order: 1;
+    min-height: 230px;
+    padding: 25px;
+  }
+
+  .form-section {
+    order: 2;
+    padding: 30px 22px;
+  }
+
+  .login-container.sign-in-mode {
+    flex-direction: column;
+  }
+
+  .login-container.sign-in-mode .image-section,
+  .login-container.sign-in-mode .form-section {
+    order: initial;
+  }
+
+  .image-overlay h2 {
+    font-size: 25px;
+  }
+}

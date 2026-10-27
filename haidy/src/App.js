@@ -23,6 +23,7 @@ import Booking3 from './booking3';
 import Booking4 from './booking4';
 import Trailer1 from './trailer1';
 import Trailer4 from './trailer4';
+
 function App() {
   return (
     <BrowserRouter>
@@ -52,6 +53,7 @@ function App() {
         <Route path="/detailess/:id" element={<Detailess />}/>
         <Route path="/trailer1/:id" element={<Trailer1 />}/>
         <Route path="/trailer4/:id" element={<Trailer4 />}/>
+        
       </Routes>
     </BrowserRouter>
   );
